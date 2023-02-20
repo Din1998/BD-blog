@@ -4,7 +4,7 @@ import btnImg from '../image/google.png'
 export default function Login() {
 
   const google = () => {
-    window.open("http://localhost:8000/auth/google", "_self");
+    window.open("https://server-1998.vercel.app/auth/google", "_self");
   }
 
   return (

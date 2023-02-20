@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar ({user}) {
   const logout = () => {
-    window.open("http://localhost:8000/auth/logout", "_self");
+    window.open("https://server-1998.vercel.app/auth/logout", "_self");
   };
   return(
     <div className="navBar">
