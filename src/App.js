@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:8000/auth/login/success", {
+      fetch("https://server-1998.vercel.app/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -41,7 +41,7 @@ function App() {
   const [blog,setBlog] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api`)
+    axios.get(`https://server-1998.vercel.app/api`)
     .then(res => {
       setBlog(res.data)
     }).catch(err => console.log(err))
