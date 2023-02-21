@@ -21,7 +21,7 @@ function App() {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": 'true',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods':'POST,GET,DELETE,UPDATE',
+          'Access-Control-Allow-Methods':'POST,GET,DELETE,PUT',
         },
       })
         .then((response) => {
