@@ -20,6 +20,7 @@ function App() {
           Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": '*',
+          'Access-Control-Allow-Methods':'POST,GET,DELETE,UPDATE',
         },
       })
         .then((response) => {
