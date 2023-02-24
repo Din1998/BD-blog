@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("https://server-1998.vercel.app/auth/login/success", {
+      fetch("http://localhost:8000/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -21,7 +21,6 @@ function App() {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": 'true',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods':'POST,GET,DELETE,PUT',
         },
       })
         .then((response) => {
@@ -40,10 +39,11 @@ function App() {
 
   console.log(user)
 
+  //get blog from server
   const [blog,setBlog] = useState([])
 
   useEffect(() => {
-    axios.get(`https://server-1998.vercel.app/api`)
+    axios.get(`http://localhost:8000/api`)
     .then(res => {
       setBlog(res.data)
     }).catch(err => console.log(err))

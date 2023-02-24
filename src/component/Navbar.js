@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function Navbar ({user}) {
   const logout = () => {
-    window.open("https://server-1998.vercel.app/auth/logout", "_self");
+    window.open("http://localhost:8000/auth/logout", "_self");
   };
   return(
     <div className="navBar">
-      <span className="logo"><Link to='/'>Din</Link></span>
+      <span className="logo"><Link className="link" to='/'>Din</Link></span>
       {
         user ? (
       <ul className="list">
@@ -17,7 +17,7 @@ export default function Navbar ({user}) {
         <li className="listItem">{user.displayName}</li>
         <li className="listItem" onClick={logout}>Logout</li>
       </ul>
-      ) : (<Link to="/login">Login</Link>)
+      ) : (<Link className="link" to="/login">Login</Link>)
     }
     </div>
   )

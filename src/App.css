@@ -19,6 +19,7 @@
 }
 
 .listItem{
+  cursor: pointer;
   margin-right: 24px;
   font-weight: 700;
 }
@@ -32,6 +33,11 @@
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.link{
+  color: #333;
+  text-decoration: none;
 }
 
 /* home section */
@@ -57,7 +63,7 @@
 .img{
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .desc{
@@ -67,17 +73,13 @@
 }
 
 .card__btn{
+  cursor: pointer;
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
   background-color: cornflowerblue;
 }
 
-.post__page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 /* login card */
 
@@ -107,4 +109,31 @@
 .btn__img{
   width: 40px;
   height: 40px;
+}
+
+/* single post */
+.post__page{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+}
+
+
+.post__page img{
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.post__page h1{
+  padding: 20px 0px;
+  font-size: 40px;
+}
+
+.post__page p{
+  padding: 20px;
+}
+
+.current_date{
+  text-align: right;
 }
