@@ -34,7 +34,7 @@ console.log(post)
 
 
   return(
-    <div>
+    <div className="updare_page">
       <h1>update</h1>
       <form onSubmit={handleSubmit}>
         <input 

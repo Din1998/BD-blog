@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Poppins&display=swap');
+
+//base font style
+$--base-heading-Font: Poppins;
+$--base-title-Font: Inter;
+$--base-btn-Font: Lato;
+
+
+//base theme color
+
+//color plate
+
+
+//base font size
+$--base-font-size: 12px;
+$--font-size-sm: $--base-font-size * 0.75;
+$--font-size-md: $--base-font-size * 1.5;
+$--font-size-lg: $--base-font-size * 2;
+$--font-size-xl: $--base-font-size * 3;
+
+
+
+//navbar font size
+$--base-navFont-size: 1.2rem;
+$--base-navFont-weight: 900;
+
+//rgba background color
+$--base-linear-background: linear-gradient(15deg, #738FA7,#0C4160);
+
+//section padding
+$--base-padding: 0px 60px;
+
+//text padding
+$--title-padding: 20px 0px;
+
+//hero button padding
+$--hero-btn-padding: 1rem 2rem;
+
+//box shadow
+$--base-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+
+
+// break point
+
+$--breakpoint :(
+  "xs": 0,
+  "sm": 480px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1060px,
+  "xxl": 1200px,
+);
+

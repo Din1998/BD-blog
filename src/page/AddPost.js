@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"
+import '../css/index.css'
 
 export default function AddBlog({blogs}){
 
@@ -40,7 +41,7 @@ const handleDelete = async (id) => {
 
 
   return(
-    <div>
+    <div className="addblog_page">
       <h1>Hello</h1>
       <form onSubmit={handleSubmit}>
         <input 
