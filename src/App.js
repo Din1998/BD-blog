@@ -6,6 +6,8 @@ import Login from './page/Login';
 import Post from './page/Post';
 import {BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
 import axios from "axios";
+import AddBlog from './page/AddPost';
+import Update from './page/Update';
 
 function App() {
 
@@ -37,16 +39,23 @@ function App() {
     getUser();
   }, []);
 
-  console.log(user)
+
 
   //get blog from server
-  const [blog,setBlog] = useState([])
+  const [blogs,setBlog] = useState([])
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api`)
-    .then(res => {
-      setBlog(res.data)
-    }).catch(err => console.log(err))
+    const getAllPost = async () => {
+      try{
+        const res = await axios.get(`http://localhost:8000/api`);
+        setBlog(res.data)
+      } catch(err) {
+        console.log(err)
+      }
+    };
+    setInterval(() => getAllPost(), 1000)
+    
+    
   },[])
 
 
@@ -56,15 +65,17 @@ function App() {
       <Router>
         <Navbar user={user} />
         <Routes>
-          <Route path='/' element={< Home blog={blog}/>}/>
+          <Route path='/' element={< Home blog={blogs}/>}/>
+          <Route path='/add' element={<AddBlog blogs={blogs} />}/>
           <Route
             path='/login' 
             element={user ? <Navigate to='/' /> : <Login/>}
           />
           <Route 
             path='/post/:id'
-            element={user ? < Post blog={blog}/> : <Navigate to='/login' />}
+            element={user ? < Post blog={blogs}/> : <Navigate to='/login' />}
           />
+          <Route path="/update/:id" element={<Update blogs={blogs}/>} />
         </Routes>
       </Router>
     </div>

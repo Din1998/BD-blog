@@ -43,21 +43,22 @@
 /* home section */
 
 .home__section{
-  padding: 52px 104px;
+  padding: 52px 52px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
 /* Card */
+
 .card{
-  width: 30%;
+  margin-top: 20px;
+  width: 280px;
   padding: 12px;
   box-shadow: -1px 3px 14px 5px rgba(0,0,0,0.29);
   -webkit-box-shadow: -1px 3px 14px 5px rgba(0,0,0,0.29);
   -moz-box-shadow: -1px 3px 14px 5px rgba(0,0,0,0.29);
   border-radius: 4px;
-
 }
 
 .img{
