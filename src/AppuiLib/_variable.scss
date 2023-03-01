@@ -5,10 +5,16 @@ $--base-heading-Font: Poppins;
 $--base-title-Font: Inter;
 $--base-btn-Font: Lato;
 
-
 //base theme color
+$--base-nav-background:#EF7C8E;
+$--base-card-background:#FAE8E0;
+$--base-background:#B6E2D3;
+$--base-button-background:#D8A7B1;
 
-//color plate
+//text color
+$--title-color: #000000;
+$--subtitle-color: #999898;
+$--discription-color: #000000;
 
 
 //base font size
@@ -18,30 +24,54 @@ $--font-size-md: $--base-font-size * 1.5;
 $--font-size-lg: $--base-font-size * 2;
 $--font-size-xl: $--base-font-size * 3;
 
+// logo size
+$--logo-size: 24px;
 
-
-//navbar font size
-$--base-navFont-size: 1.2rem;
-$--base-navFont-weight: 900;
+//font weight
+$--base-weight-sm: 400;
+$--base-weight-md: 600;
+$--base-weight-xl: 900;
 
 //rgba background color
-$--base-linear-background: linear-gradient(15deg, #738FA7,#0C4160);
+$--linear-background: linear-gradient(15deg, #738FA7,#0C4160);
+
+//avatar size
+$--avatar-width: 44px;
+$--avatar-hight: 44px;
 
 //section padding
 $--base-padding: 0px 60px;
 
-//text padding
+//padding
+$--navbar-padding: 12px 40px;
 $--title-padding: 20px 0px;
+$--btn-padding: 8px 16px;
+$--card-padding: 12px;
+$--btn-padding-sm: 8px 12px;
 
-//hero button padding
-$--hero-btn-padding: 1rem 2rem;
+// radius
+$--base-radius-md: 4px;
+$--base-radius-xl: 8px;
+
+// card
+$--card-width: 280px;
+$--card-height: 420px;
+// card p
+$--card-p-height: 120px;
+$--card-p-width: 100%;;
+//card image
+$--card-img-width: 100%;
+$--card-img-height: 200px;
+
+
 
 //box shadow
-$--base-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+$--base-box-shadow: 2px 6px 6px -2px rgba(0,0,0,0.5);;
+$--webkit-box-shadow: 4px 6px 6px -2px rgba(0,0,0,0.5);
+$--moz-box-shadow:  4px 6px 6px -2px rgba(0,0,0,0.5);
 
 
 // break point
-
 $--breakpoint :(
   "xs": 0,
   "sm": 480px,

@@ -42,50 +42,62 @@ const handleDelete = async (id) => {
 
   return(
     <div className="addblog_page">
-      <h1>Hello</h1>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text"
-          required={true}
-          placeholder="Title"
-          name="title"
-          onChange={handleChange}
-        />
-        <input 
-          type="text" 
-          required={true}
-          placeholder="Discription"
-          name="discription"
-          onChange={handleChange}
-        />
-        <input 
-          type="text" 
-          required={true}
-          placeholder="Full Discription"
-          name="fullDiscription"
-          onChange={handleChange}
-        />
-        <input 
-          type="url" 
-          required={true}
-          placeholder="Image Urls"
-          name="imageUrl"
-          onChange={handleChange}
-        />
-        <button>Post</button>
-      </form>
-      <div>
-      {blogs.map(blogs => (
-        <div key={blogs._id}>
-          <p>{blogs.title}</p>
-          <button onClick={() => handleDelete(blogs._id)}>Delete</button>
-          <button>
-            <Link to={`/update/${blogs._id}`}>
-            Update
-            </Link>
-          </button>
-        </div>
-      ))}
+      <h1>Add New Blog</h1>
+      <div className="content_wraper">
+          <div className="form_wraper">
+            <form onSubmit={handleSubmit}>
+              <label>Title</label>
+              <input 
+                type="text"
+                required={true}
+                
+                name="title"
+                onChange={handleChange}
+              />
+              <label>Discription</label>
+              <input 
+                type="text" 
+                required={true}
+                
+                name="discription"
+                onChange={handleChange}
+              />
+              <label>Full Discription</label>
+              <input 
+                type="text" 
+                required={true}
+              
+                name="fullDiscription"
+                onChange={handleChange}
+              />
+              <label>Image Urls</label>
+              <input 
+                type="url" 
+                required={true}
+                
+                name="imageUrl"
+                onChange={handleChange}
+              />
+              <button>Post</button>
+            </form>
+          </div>
+        
+          <div className="blog_list">
+            <p>All blogs</p>
+            {blogs.map(blogs => (
+              <div className="blog" key={blogs._id}>
+                <p>{blogs.title}</p>
+                <div className="act_btn">
+                  <button className="delete_btn" onClick={() => handleDelete(blogs._id)}>Delete</button>
+                  <button>
+                    <Link className="link" to={`/update/${blogs._id}`}>
+                    Update
+                    </Link>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
       </div>
     </div>
   )

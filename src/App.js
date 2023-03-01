@@ -1,4 +1,4 @@
-import './App.css';
+
 import { useEffect,useState } from 'react';
 import Navbar from './component/Navbar';
 import Home from './page/Home';
@@ -8,6 +8,7 @@ import {BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
 import axios from "axios";
 import AddBlog from './page/AddPost';
 import Update from './page/Update';
+import './css/index.css'
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
         console.log(err)
       }
     };
-    setInterval(() => getAllPost(), 1000)
+    setInterval(() => getAllPost(), 3000)
     
     
   },[])
@@ -66,7 +67,7 @@ function App() {
         <Navbar user={user} />
         <Routes>
           <Route path='/' element={< Home blog={blogs}/>}/>
-          <Route path='/add' element={<AddBlog blogs={blogs} />}/>
+          <Route path='/dashboard' element={<AddBlog blogs={blogs} />}/>
           <Route
             path='/login' 
             element={user ? <Navigate to='/' /> : <Login/>}

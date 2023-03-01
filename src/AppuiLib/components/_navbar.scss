@@ -1,0 +1,38 @@
+.navBar{
+  font-family: Inter;
+  padding: $--navbar-padding;
+  background-color: $--base-nav-background;
+  color: $--title-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.listItem {
+  cursor: pointer;
+  margin-right: 24px;
+  font-weight:  $--base-weight-md;
+}
+
+.logo{
+  font-size: $--logo-size;
+  font-weight: $--base-weight-md;
+}
+
+.avatar{
+  width: $--avatar-width;
+  height: $--avatar-hight;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.link{
+  color: $--title-color;
+  text-decoration: none;
+}

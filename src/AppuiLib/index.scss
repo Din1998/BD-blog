@@ -1,15 +1,10 @@
-*{
-  font-family: Inter;
-  margin: 0;
-  padding: 0;
-}
-
-.addblog_page{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-
 //variables & functions
 @import 'variable';
+
+//base style & layouts
+@import './base';
+
+
+// components
+@import './components/navbar';
+@import './components/card'

@@ -1,0 +1,39 @@
+.card{
+  font-family: $--base-heading-Font;
+  margin-top: 20px;
+  width: $--card-width;
+  height: $--card-height;
+  padding: $--card-padding;
+  background-color: $--base-card-background;
+  box-shadow: $--base-box-shadow;
+  -webkit-box-shadow: $--webkit-box-shadow;
+  -moz-box-shadow: $--moz-box-shadow;
+  border-radius: 4px;
+  a{
+    p{
+      height: $--card-p-height;
+      width: $--card-p-width;
+    }
+  }
+}
+
+.img{
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+}
+
+.desc{
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.card__btn{
+  font-family: $--base-btn-Font;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: $--base-radius-md;
+  background-color: $--base-button-background;
+}

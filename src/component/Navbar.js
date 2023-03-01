@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import '../css/index.css'
 
 export default function Navbar ({user}) {
   const logout = () => {
@@ -7,7 +7,7 @@ export default function Navbar ({user}) {
   };
   return(
     <div className="navBar">
-      <span className="logo"><Link className="link" to='/'>Din</Link></span>
+      <span className="logo"><Link className="link" to='/'>BD Blog</Link></span>
       {
         user ? (
       <ul className="list">
