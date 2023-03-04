@@ -1,31 +1,52 @@
 import axios from "axios"
-import {useState} from "react"
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import {useState,useEffect} from "react"
+import { useLocation, useNavigate } from "react-router-dom";
 import '../css/index.css'
 
-export default function Update({blogs}) {
+export default function Update() {
 
-  const [blog,updateBlog] = useState({
-    title: "",
-    discription: "",
-    fullDiscription: "",
-    imageUrl: ""
-  })
+  const [blog,updateBlog] = useState("")
+  const [input,setInput] = useState("")
   const navigate = useNavigate();
   const location = useLocation();
   const blogId = location.pathname.split("/")[2];
-  const post = blogs.find((b) => b._id.toString() === blogId);
+  // const post = blogs.find((b) => b._id.toString() === blogId);
 
 
   const handleChange = (e) => {
-    updateBlog((prev) => ({...prev,[e.target.name]:e.target.value}))
+    setInput((prev) => ({...prev,[e.target.name]:e.target.value}))
   }
 
-// post blog
+
+// get blog by id
+  const getBlog = async () => {
+    const res = await axios
+    .get(`http://localhost:8000/api/${blogId}`)
+    .then((result) => {
+      updateBlog(result.data)
+      setInput(result.data)
+    })
+    .catch((err) => console.log(err));
+    
+  }
+
+useEffect(() => {
+  getBlog()
+  
+},[])
+
+
+
+// update blog
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      await axios.put(`http://localhost:8000/api/${blogId}`,blog);
+      await axios.put(`http://localhost:8000/api/${blogId}`,{
+        title: input.title,
+        discription: input.discription,
+        fullDiscription: input.fullDiscription,
+        imageUrl: input.imageUrl,
+      });
       navigate("/");
     }catch(err){
       console.log(err)
@@ -42,6 +63,7 @@ export default function Update({blogs}) {
             type="text"
             required={true}
             placeholder="Title"
+            value={input.title}
             name="title"
             onChange={handleChange}
           />
@@ -50,6 +72,7 @@ export default function Update({blogs}) {
             required={true}
             placeholder="Discription"
             name="discription"
+            value={input.discription}
             onChange={handleChange}
           />
           <input 
@@ -57,6 +80,7 @@ export default function Update({blogs}) {
             required={true}
             placeholder="Full Discription"
             name="fullDiscription"
+            value={input.fullDiscription}
             onChange={handleChange}
           />
           <input 
@@ -64,6 +88,7 @@ export default function Update({blogs}) {
             required={true}
             placeholder="Image Urls"
             name="imageUrl"
+            value={input.imageUrl}
             onChange={handleChange}
           />
           <button>Post</button>
