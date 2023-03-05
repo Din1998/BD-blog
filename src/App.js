@@ -48,7 +48,7 @@ function App() {
   useEffect(() => {
     const getAllPost = async () => {
       try{
-        const res = await axios.get(`https://server-1998-99cqzuby4-din1998.vercel.app/api`);
+        const res = await axios.get(`https://server2023.vercel.app/api`);
         setBlog(res.data)
       } catch(err) {
         console.log(err)
