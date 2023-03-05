@@ -8,6 +8,19 @@
   background-color: $--base-background;
 }
 
+.home__section{
+  padding: 52px 52px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .card__container{
+    width: 800px;
+  }
+  .feature__content{
+    width: 300px;
+  }
+}
+
 // add blog style
 .addblog_page{
   font-family: $--base-title-Font;
