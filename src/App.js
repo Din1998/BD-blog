@@ -15,18 +15,10 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const getUser = () => {
-      fetch("https://server2023.vercel.app/auth/login/success", {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": 'true',
-          'Access-Control-Allow-Origin': '*',
-        },
-      })
-        .then((response) => {
+    const getUser = async () => {
+      await axios
+      .get(`https://server2023.vercel.app/auth/login/success`)
+      .then((response) => {
           if (response.status === 200) return response.json();
           throw new Error("authentication has been failed!");
         })
