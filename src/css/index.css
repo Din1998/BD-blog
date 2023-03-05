@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Mynerve&family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,19 @@
 .App {
   height: 100%;
   background-color: #fff;
+}
+
+.home__section {
+  padding: 52px 52px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.home__section .card__container {
+  width: 800px;
+}
+.home__section .feature__content {
+  width: 300px;
 }
 
 .addblog_page {
@@ -37,11 +50,11 @@
   flex-wrap: wrap;
 }
 .addblog_page .content_wraper form input {
-  background: #FAE8E0;
+  background: #ebe9eb;
   outline: none;
   border-radius: 4px;
   border: none;
-  border: 1px solid #EF7C8E;
+  border: 1px solid #767676;
   height: 60px;
 }
 .addblog_page .content_wraper form button {
@@ -51,40 +64,10 @@
   width: 120px;
   padding: 8px 16px;
   border: none;
-  background: #D8A7B1;
+  background: #767676;
 }
-
-.blog_list {
-  height: 358px;
-  overflow: auto;
-}
-
-.blog {
-  border-radius: 4px;
-  padding: 0px 20px;
-  margin: 12px 0px 8px 0px;
-  width: 280px;
-  height: 48px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: #FAE8E0;
-}
-
-.act_btn .delete_btn {
-  background: #EF7C8E;
-}
-.act_btn button {
-  margin-left: 4px;
-  cursor: pointer;
-  border-radius: 4px;
-  padding: 8px 12px;
-  border: none;
-  background: #D8A7B1;
-}
-.act_btn button .link {
-  text-decoration: none;
+.addblog_page .content_wraper form button:hover {
+  background-color: #515151;
 }
 
 .updare_page {
@@ -114,11 +97,11 @@
 }
 .updare_page .form_wraper form input {
   margin-top: 20px;
-  background: #FAE8E0;
+  background: #ebe9eb;
   outline: none;
   border-radius: 4px;
   border: none;
-  border: 1px solid #EF7C8E;
+  border: 1px solid #767676;
   height: 60px;
 }
 .updare_page .form_wraper form button {
@@ -133,7 +116,7 @@
 
 .mst__header {
   font-family: Inter;
-  padding: 28px 40px;
+  padding: 28px 52px;
 }
 .mst__header .header {
   display: flex;
@@ -156,7 +139,11 @@
   width: 33%;
 }
 .mst__header .header .logo h1 {
-  font-size: 24px;
+  font-size: 42px;
+  font-family: Mynerve;
+}
+.mst__header .header .logo h1:hover {
+  color: #767676;
 }
 .mst__header .nav_items {
   display: flex;
@@ -170,6 +157,9 @@
   color: #000000;
   text-decoration: none;
   padding: 0px 16px;
+}
+.mst__header .nav_items a:hover {
+  color: #767676;
 }
 
 .list {
@@ -199,30 +189,37 @@
 .card {
   font-family: Poppins;
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 300px;
+  border-bottom: 1px solid #ebe9eb;
+}
+.card .card__img {
   width: 280px;
-  height: 420px;
-  padding: 12px;
-  background-color: #FAE8E0;
-  box-shadow: 2px 6px 6px -2px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
+  height: 240px;
 }
-.card a p {
-  height: 120px;
+.card .card__img .img {
   width: 100%;
-}
-
-.img {
-  width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: fill;
+}
+.card .card__text {
+  padding: 20px 20px;
+  width: 400px;
+}
+.card .card__text .pub__date {
+  padding: 12px 0px;
+  color: #767676;
 }
 
 .desc {
-  color: #333;
-  margin-bottom: 20px;
+  color: #767676;
   line-height: 24px;
+  height: 70px;
+  width: 100%;
+  padding: 12px 0px;
 }
 
 .card__btn {
@@ -231,5 +228,38 @@
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  background-color: #D8A7B1;
+  background-color: #767676;
+}
+
+.blog_list {
+  height: 358px;
+  overflow: auto;
+}
+
+.blog {
+  border-radius: 4px;
+  padding: 0px 20px;
+  margin: 12px 0px 8px 0px;
+  width: 280px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #ebe9eb;
+}
+
+.act_btn .delete_btn {
+  background: #EF7C8E;
+}
+.act_btn button {
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  background: #D8A7B1;
+}
+.act_btn button .link {
+  text-decoration: none;
 }

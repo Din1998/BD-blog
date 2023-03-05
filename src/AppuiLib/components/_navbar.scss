@@ -1,6 +1,6 @@
 .mst__header{
   font-family: Inter;
-  padding: 28px 40px;
+  padding: 28px 52px;
   .header{
     display: flex;
     flex-direction: row;
@@ -20,12 +20,17 @@
     .logo{
       width: 33%;
       h1{
-        font-size: 24px;
+        font-size: 42px;
+        font-family: $--base-logo-font;
+      }
+      h1:hover{
+        color: $--subtext;
       }
     }
    
   }
   .nav_items{
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -36,6 +41,9 @@
       color: $--main-text-color;
       text-decoration: none;
       padding: 0px 16px;
+    }
+    a:hover{
+      color: $--subtext;
     }
 
   }
