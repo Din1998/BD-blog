@@ -263,3 +263,26 @@
 .act_btn button .link {
   text-decoration: none;
 }
+
+.footer {
+  height: 200px;
+  background: #767676;
+  color: #ebe9eb;
+}
+.footer .footer__wraper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__wraper .logo {
+  padding: 12px 0px;
+}
+.footer .footer__wraper .logo h1 {
+  font-size: 42px;
+  font-family: Mynerve;
+}
+.footer .footer__wraper p {
+  text-align: center;
+}

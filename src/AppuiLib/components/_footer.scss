@@ -1,0 +1,23 @@
+.footer{
+  height: 200px;
+  background: $--subtext;
+  color: $--secondary--color;
+  
+  .footer__wraper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo{
+      padding: 12px 0px;
+      h1{
+        font-size: 42px;
+        font-family: $--base-logo-font;
+      }
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
