@@ -5,8 +5,9 @@ import '../css/index.css'
 
 export default function Navbar ({user}) {
   const logout = () => {
-    window.open("http://localhost:8000/auth/logout", "_self");
+    window.open("https://server2023.vercel.app/auth/logout", "_self");
   };
+  console.log(user)
   return(
     <header className="mst__header" role='banner'>
         <div className="header">
