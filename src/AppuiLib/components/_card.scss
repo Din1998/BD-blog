@@ -19,14 +19,17 @@
   .card__text{
     padding: 20px 20px;
     width: 400px;
-    height: 200px;
+    .pub__date{
+      padding: 12px 0px;
+      color: $--subtext;
+    }
   }
 }
 
 .desc{
   color: $--subtext;
   line-height: 24px;
-  height: $--card-p-height;
+  height: $--card-subtext-height;
   width: $--card-p-width;
   padding: 12px 0px;
 }

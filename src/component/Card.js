@@ -15,13 +15,13 @@ export default function Card ({blog}) {
       </div>
 
       <div className="card__text">
-        <Link className="link" to={`/post/${blog._id}`}>
+          <Link className="link" to={`/post/${blog._id}`}>
         <h2 className="title">{blog.title}</h2>
         </Link>
-        <p className="desc">{blog.discription}</p>
-        
+          <p className="desc">{blog.discription}</p>
+          <p className="pub__date">{new Date(blog.date).toDateString()}</p>
         <Link className="link" to={`/post/${blog._id}`}>
-          <button className="card__btn">Reade More</button>
+          <button className="card__btn">Read More...</button>
         </Link>
         
       </div>
