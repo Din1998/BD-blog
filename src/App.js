@@ -13,6 +13,25 @@ import Footer from './component/Footer';
 
 function App() {
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      await axios
+      .get(`https://server2023.vercel.app/auth/login/success`)
+      .then((response) => {
+          if (response.status === 200) return response.json();
+          throw new Error("authentication has been failed!");
+        })
+        .then((resObject) => {
+          setUser(resObject.user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getUser();
+  }, []);
 
   //get blog from server
   const [blogs,setBlog] = useState([])
@@ -35,14 +54,17 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar  />
+        <Navbar user={user} />
         <Routes>
           <Route path='/' element={< Home blog={blogs}/>}/>
           <Route path='/dashboard' element={<AddBlog blogs={blogs} />}/>
-          
+          <Route
+            path='/login' 
+            element={user ? <Navigate to='/' /> : <Login/>}
+          />
           <Route 
             path='/post/:id'
-            element={ < Post blog={blogs}/> }
+            element={user ? < Post blog={blogs}/> : <Navigate to='/login' />}
           />
           <Route path="/update/:id" element={<Update blogs={blogs}/>} />
         </Routes>
