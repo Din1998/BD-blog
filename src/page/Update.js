@@ -21,7 +21,7 @@ export default function Update() {
 // get blog by id
   const getBlog = async () => {
     const res = await axios
-    .get(`https://server-1998-99cqzuby4-din1998.vercel.app/api/${blogId}`)
+    .get(`https://server2023.vercel.app/api/${blogId}`)
     .then((result) => {
       updateBlog(result.data)
       setInput(result.data)
@@ -41,7 +41,7 @@ useEffect(() => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      await axios.put(`https://server-1998-99cqzuby4-din1998.vercel.app/api/${blogId}`,{
+      await axios.put(`https://server2023.vercel.app/api/${blogId}`,{
         title: input.title,
         discription: input.discription,
         fullDiscription: input.fullDiscription,
