@@ -56,7 +56,6 @@ function App() {
     };
     setInterval(() => getAllPost(), 3000)
     
-    
   },[])
 
 
