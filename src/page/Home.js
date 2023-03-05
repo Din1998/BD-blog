@@ -15,6 +15,7 @@ export default function Home({blog}) {
       <div className="right__content">
           <div className="feature__content">
             <h1>Feature content</h1>
+            <p>Coming soon ...</p>
           </div>
       </div>
     </div>
