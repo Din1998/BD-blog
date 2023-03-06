@@ -34,29 +34,4 @@
   height: 40px;
 }
 
-/* single post */
-.post__page{
-  display: flex;
-  flex-direction: column;
-  padding: 0px 40px;
-}
 
-
-.post__page img{
-  object-fit: cover;
-  width: 100%;
-  height: 300px;
-}
-
-.post__page h1{
-  padding: 20px 0px;
-  font-size: 40px;
-}
-
-.post__page p{
-  padding: 20px;
-}
-
-.current_date{
-  text-align: right;
-}
