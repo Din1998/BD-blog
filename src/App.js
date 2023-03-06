@@ -17,8 +17,8 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("https://server2023.vercel.app/auth/login/success", {
-        method: "GET",
+      fetch("http://server2023.vercel.app/auth/login/success", {
+        method: "GET,POST,PUT",
         credentials: "include",
         headers: {
           Accept: "application/json",
