@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom"
+import '../css/index.css'
 import '../App.css'
 
 

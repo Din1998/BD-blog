@@ -126,17 +126,11 @@
   padding: 28px 0px;
   border-bottom: 1px solid #ebe9eb;
 }
-.mst__header .header .icons {
-  width: 33%;
-}
 .mst__header .header .icons .header_icon {
   height: 20px;
   width: 20px;
   padding: 0px 12px;
   cursor: pointer;
-}
-.mst__header .header .logo {
-  width: 33%;
 }
 .mst__header .header .logo h1 {
   font-size: 42px;
@@ -285,4 +279,35 @@
 }
 .footer .footer__wraper p {
   text-align: center;
+}
+
+.post__page {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+  font-family: Inter;
+}
+.post__page .post__page img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.post__page img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.post__page h1 {
+  padding: 20px 0px;
+  font-size: 40px;
+}
+
+.post__page p {
+  padding: 20px;
+}
+
+.current_date {
+  text-align: right;
 }
