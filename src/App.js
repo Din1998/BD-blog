@@ -15,32 +15,32 @@ function App() {
 
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const getUser = () => {
-      fetch("https://server2023.vercel.app/auth/login/success", {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-          Accept: "application/json",
-          "Content-Type": 'application/json',
-          "Access-Control-Allow-Credentials": 'true',
-          "Access-Control-Allow-Origin": '*',
-          "Access-Control-Allow-Headers": ' Authorization',
-        },
-      })
-        .then((response) => {
-          if (response.status === 200) return response.json();
-          throw new Error("authentication has been failed!");
-        })
-        .then((resObject) => {
-          setUser(resObject.user);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    getUser();
-  }, []);
+  // useEffect(() => {
+  //   const getUser = () => {
+  //     fetch("https://server2023.vercel.app/auth/login/success", {
+  //       method: 'GET',
+  //       credentials: 'include',
+  //       headers: {
+  //         Accept: "application/json",
+  //         "Content-Type": 'application/json',
+  //         "Access-Control-Allow-Credentials": 'true',
+  //         "Access-Control-Allow-Origin": '*',
+  //         "Access-Control-Allow-Headers": ' Authorization',
+  //       },
+  //     })
+  //       .then((response) => {
+  //         if (response.status === 200) return response.json();
+  //         throw new Error("authentication has been failed!");
+  //       })
+  //       .then((resObject) => {
+  //         setUser(resObject.user);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   };
+  //   getUser();
+  // }, []);
 
   //get blog from server
   const [blogs,setBlog] = useState([])
@@ -63,17 +63,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar user={user} />
+        <Navbar  />
         <Routes>
           <Route path='/' element={< Home blog={blogs}/>}/>
           <Route path='/dashboard' element={<AddBlog blogs={blogs} />}/>
-          <Route
-            path='/login' 
-            element={user ? <Navigate to='/' /> : <Login/>}
-          />
+          
           <Route 
             path='/post/:id'
-            element={user ? < Post blog={blogs}/> : <Navigate to='/login' />}
+            element={ < Post blog={blogs} />}
           />
           <Route path="/update/:id" element={<Update blogs={blogs}/>} />
         </Routes>
