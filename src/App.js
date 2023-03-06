@@ -17,15 +17,15 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://server2023.vercel.app/auth/login/success", {
+      fetch("https://server2023.vercel.app/auth/login/success", {
         method: 'GET',
-        credentials: "include",
+        credentials: 'include',
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "Content-Type": 'application/json',
           "Access-Control-Allow-Credentials": 'true',
           "Access-Control-Allow-Origin": '*',
-          "Access-Control-Allow-Headers": 'Origin, X-Api-Key, X-Requested-With, Content-Type, Accept, Authorization',
+          "Access-Control-Allow-Headers": ' Authorization',
         },
       })
         .then((response) => {
