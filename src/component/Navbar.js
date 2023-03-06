@@ -7,7 +7,7 @@ export default function Navbar ({user}) {
   const logout = () => {
     window.open("https://server2023.vercel.app/auth/logout", "_self");
   };
-  console.log(user)
+
   return(
     <header className="mst__header" role='banner'>
         <div className="header">
@@ -28,7 +28,7 @@ export default function Navbar ({user}) {
               <li className="listItem">{user.displayName}</li>
               <li className="listItem" onClick={logout}>Logout</li>
             </ul>
-            ) : (<Link className="link" to="/login">Login</Link>)
+            ) : (<Link className="link" to="/">Login</Link>)
             }
           </div>
         </div>
