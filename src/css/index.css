@@ -189,6 +189,7 @@
   align-items: center;
   height: 300px;
   border-bottom: 1px solid #ebe9eb;
+  padding: 0px 20px;
 }
 .card .card__img {
   width: 280px;
