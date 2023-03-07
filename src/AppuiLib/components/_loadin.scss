@@ -1,0 +1,15 @@
+.loading__component{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  h1{
+    font-family: $--base-logo-font;
+    color: $--subtitle-color;
+  }
+  p{
+    font-family: $--base-heading-Font;
+  }
+}

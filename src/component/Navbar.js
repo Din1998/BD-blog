@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook,faTwitter,faYoutube,faInstagram } from '@fortawesome/free-brands-svg-icons'
-import '../css/index.css'
+import '../css/index.css';
+import { motion } from "framer-motion";
 
 export default function Navbar ({user}) {
   const logout = () => {
@@ -9,6 +10,7 @@ export default function Navbar ({user}) {
   };
 
   return(
+   
     <header className="mst__header" role='banner'>
         <div className="header">
           <div className="icons">
@@ -32,7 +34,10 @@ export default function Navbar ({user}) {
             }
           </div>
         </div>
-        
+        <motion.div
+          initial={{y: -250}}
+          animate={{y: -10}}
+        >
         <div className="nav_items">
             <nav>
               <a href="#">Home</a>
@@ -41,8 +46,7 @@ export default function Navbar ({user}) {
               <a href="#">Contact</a>
             </nav>
         </div>
-        
-
+        </motion.div>
     </header>
     
   )

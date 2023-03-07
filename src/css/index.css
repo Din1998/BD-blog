@@ -208,6 +208,10 @@
   color: #767676;
 }
 
+.card:hover {
+  background: #ebe9eb;
+}
+
 .desc {
   color: #767676;
   line-height: 24px;
@@ -217,12 +221,13 @@
 }
 
 .card__btn {
+  color: #ffffff;
   font-family: Lato;
   cursor: pointer;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  background-color: #767676;
+  background-color: #000000;
 }
 
 .blog_list {
@@ -310,4 +315,20 @@
 
 .current_date {
   text-align: right;
+}
+
+.loading__component {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.loading__component h1 {
+  font-family: Mynerve;
+  color: #515151;
+}
+.loading__component p {
+  font-family: Poppins;
 }
