@@ -1,6 +1,9 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
-import Card from "../component/Card"
+import Card from "../component/Card";
+import FollowCard from "../component/FollowCard";
+import FeaturePost from "../component/FeaturePost";
+
 
 
 
@@ -38,8 +41,12 @@ export default function Home() {
       
       <div className="right__content">
           <div className="feature__content">
-            <h1>Feature content</h1>
-            <p>Coming soon ...</p>
+            <div className="feature__content__component">
+              <FeaturePost />
+            </div>
+            <div className="follow__card">
+              <FollowCard />
+            </div>
           </div>
       </div>
 

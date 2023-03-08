@@ -347,3 +347,51 @@
 .loading__component p {
   font-family: Poppins;
 }
+
+.feature__post {
+  cursor: pointer;
+  width: 100%;
+  height: 300px;
+}
+.feature__post img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+}
+.feature__post .info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  opacity: 1;
+  font-family: Inter;
+  color: white;
+}
+.feature__post .info .feature__text {
+  padding: 20px;
+}
+
+.follow__card {
+  width: 100%;
+  height: 120px;
+  font-family: Mynerve;
+  padding: 12px 0px;
+}
+.follow__card .follow__icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 24px 0px;
+}
+.follow__card .follow_icon {
+  cursor: pointer;
+  font-size: 28px;
+}
