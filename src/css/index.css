@@ -30,7 +30,7 @@
   align-items: center;
 }
 .addblog_page h1 {
-  padding: 28px 0px;
+  padding: 12px 0px;
 }
 .addblog_page .content_wraper {
   padding: 52px 0px;
@@ -50,12 +50,17 @@
   flex-wrap: wrap;
 }
 .addblog_page .content_wraper form input {
-  background: #ebe9eb;
-  outline: none;
+  padding: 20px;
   border-radius: 4px;
   border: none;
-  border: 1px solid #767676;
-  height: 60px;
+  border: 2px solid #515151;
+}
+.addblog_page .content_wraper form textarea {
+  padding: 20px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  border: 2px solid #515151;
 }
 .addblog_page .content_wraper form button {
   cursor: pointer;
@@ -64,7 +69,8 @@
   width: 120px;
   padding: 8px 16px;
   border: none;
-  background: #767676;
+  color: #ffffff;
+  background: #000000;
 }
 .addblog_page .content_wraper form button:hover {
   background-color: #515151;
@@ -96,13 +102,17 @@
   flex-wrap: wrap;
 }
 .updare_page .form_wraper form input {
-  margin-top: 20px;
-  background: #ebe9eb;
-  outline: none;
+  padding: 20px;
   border-radius: 4px;
   border: none;
-  border: 1px solid #767676;
-  height: 60px;
+  border: 2px solid #515151;
+}
+.updare_page .form_wraper form textarea {
+  padding: 20px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  border: 2px solid #515151;
 }
 .updare_page .form_wraper form button {
   cursor: pointer;
@@ -111,7 +121,11 @@
   width: 120px;
   padding: 8px 16px;
   border: none;
-  background: #D8A7B1;
+  color: #ffffff;
+  background: #000000;
+}
+.updare_page .form_wraper form button:hover {
+  background-color: #515151;
 }
 
 .mst__header {

@@ -5,7 +5,7 @@ import '../css/index.css'
 
 export default function Update() {
 
-  const [blog,updateBlog] = useState("")
+
   const [input,setInput] = useState("")
   const navigate = useNavigate();
   const location = useLocation();
@@ -23,7 +23,6 @@ export default function Update() {
     const res = await axios
     .get(`https://server2023.vercel.app/api/${blogId}`)
     .then((result) => {
-      updateBlog(result.data)
       setInput(result.data)
     })
     .catch((err) => console.log(err));
@@ -59,6 +58,7 @@ useEffect(() => {
       <h1>Update Blog</h1>
       <div className="form_wraper">
         <form onSubmit={handleSubmit}>
+        <label>Title</label>
           <input 
             type="text"
             required={true}
@@ -67,7 +67,8 @@ useEffect(() => {
             name="title"
             onChange={handleChange}
           />
-          <input 
+          <label>Discription</label>
+          <textarea
             type="text" 
             required={true}
             placeholder="Discription"
@@ -75,7 +76,8 @@ useEffect(() => {
             value={input.discription}
             onChange={handleChange}
           />
-          <input 
+          <label>Full Discription</label>
+          <textarea
             type="text" 
             required={true}
             placeholder="Full Discription"
@@ -83,6 +85,7 @@ useEffect(() => {
             value={input.fullDiscription}
             onChange={handleChange}
           />
+          <label>Image Urls</label>
           <input 
             type="url" 
             required={true}
