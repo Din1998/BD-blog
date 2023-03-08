@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   h1{
-    padding: 28px 0px;
+    padding: 12px 0px;
   }
   .content_wraper{
     padding: 52px 0px;
@@ -50,12 +50,17 @@
       justify-content: space-around;
       flex-wrap: wrap;
       input{
-        background: $--secondary--color;
-        outline: none;
+        padding: 20px ;
         border-radius: 4px;
         border: none;
-        border: 1px solid $--subtext;
-        height: 60px;
+        border: 2px solid $--subtitle-color;
+      }
+      textarea{
+        padding: 20px ;
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        border: 2px solid $--subtitle-color;
       }
       button{
         cursor: pointer;
@@ -64,7 +69,8 @@
         width: 120px;
         padding: $--btn-padding;
         border: none;
-        background: $--subtext;
+        color: $--btn-textcolor;
+        background: $--btn-color;
       }
       button:hover{
         background-color: $--subtitle-color;
@@ -101,13 +107,19 @@
       justify-content: space-around;
       flex-wrap: wrap;
       input{
-        margin-top: 20px;
-        background: $--secondary--color;
-        outline: none;
+        padding: 20px ;
         border-radius: 4px;
         border: none;
-        border: 1px solid $--subtext;
-        height: 60px;
+        border: 2px solid $--subtitle-color;
+
+      }
+      textarea{
+        padding: 20px ;
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        border: 2px solid $--subtitle-color;
+;
       }
       button{
         cursor: pointer;
@@ -116,7 +128,11 @@
         width: 120px;
         padding: $--btn-padding;
         border: none;
-        background: $--base-button-background;
+        color: $--btn-textcolor;
+        background: $--btn-color;
+      }
+      button:hover{
+        background-color: $--subtitle-color;
       }
     }
   }

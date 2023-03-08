@@ -1,9 +1,12 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"
 import '../css/index.css'
 
-export default function AddBlog({blogs}){
+export default function AddBlog(){
+
+  const [isPending,setPending] = useState(true)
+  const [blogs,setBlog] = useState([])
 
   const [blog,addBlog] = useState({
     title: "",
@@ -18,11 +21,28 @@ export default function AddBlog({blogs}){
     addBlog((prev) => ({...prev,[e.target.name]:e.target.value}))
   }
 
+// get all blog
+  useEffect(() => {
+    const getAllPost = async () => {
+      try{
+        const res = await axios.get(`https://server2023.vercel.app/api`);
+        setBlog(res.data)
+        setPending(false)
+      } catch(err) {
+        console.log(err)
+      }
+    };
+    getAllPost()
+    
+  },[])
+
+
+
 // post blog
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      await axios.post("http://localhost:8000/api/post",blog);
+      await axios.post("https://server2023.vercel.app/api/post",blog);
       navigate("/");
     }catch(err){
       console.log(err)
@@ -32,7 +52,7 @@ export default function AddBlog({blogs}){
 // delete blog
 const handleDelete = async (id) => {
   try {
-    await axios.delete(`http://localhost:8000/api/${id}`);
+    await axios.delete(`https://server2023.vercel.app/api/${id}`);
     window.location.reload()
   } catch (err) {
     console.log(err);
@@ -55,15 +75,15 @@ const handleDelete = async (id) => {
                 onChange={handleChange}
               />
               <label>Discription</label>
-              <input 
-                type="text" 
+              <textarea
+                typeof="text"
                 required={true}
-                
                 name="discription"
                 onChange={handleChange}
               />
+              
               <label>Full Discription</label>
-              <input 
+              <textarea 
                 type="text" 
                 required={true}
               
@@ -84,6 +104,10 @@ const handleDelete = async (id) => {
         
           <div className="blog_list">
             <p>All blogs</p>
+            { isPending && <div className="loading__component">
+            <h1>BD Blog</h1>
+            <p>Loading...</p>
+            </div> }
             {blogs.map(blogs => (
               <div className="blog" key={blogs._id}>
                 <p>{blogs.title}</p>

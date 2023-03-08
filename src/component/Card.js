@@ -40,14 +40,11 @@ export default function Card ({blog}) {
           <p className="desc">{blog.discription}</p>
           <p className="pub__date">{new Date(blog.date).toDateString()}</p>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "just", stiffness: 400, damping: 10 }}
-          >
+
             <Link className="link" to={`/post/${blog._id}`}>
             <button className="card__btn">Read More...</button>
             </Link>
-          </motion.div>
+
         
         
       </div>
