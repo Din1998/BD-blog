@@ -10,15 +10,18 @@
 }
 
 .home__section {
-  padding: 52px 52px;
+  padding: 0px 52px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .home__section .card__container {
+  display: flex;
+  flex-direction: column-reverse;
   width: 800px;
 }
 .home__section .feature__content {
+  padding: 120px 0px;
   width: 300px;
 }
 
@@ -129,16 +132,22 @@
 }
 
 .mst__header {
+  position: static;
+  width: 100%;
   font-family: Inter;
-  padding: 28px 52px;
+  z-index: 2;
+  background-color: #ebe9eb;
 }
 .mst__header .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 28px 0px;
-  border-bottom: 1px solid #ebe9eb;
+  padding: 28px 28px;
+  border-bottom: 1px solid #000000;
+}
+.mst__header .header .icons {
+  display: block;
 }
 .mst__header .header .icons .header_icon {
   height: 20px;
@@ -154,12 +163,14 @@
   color: #767676;
 }
 .mst__header .nav_items {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 28px 0px;
-  border-bottom: 1px solid #ebe9eb;
+  border-bottom: 1px solid #000000;
+  z-index: 1;
 }
 .mst__header .nav_items a {
   color: #000000;
@@ -168,6 +179,14 @@
 }
 .mst__header .nav_items a:hover {
   color: #767676;
+}
+.mst__header .nav_items nav {
+  position: fixed !important;
+  display: flex;
+  flex-direction: row;
+}
+.mst__header .nav_items .ham__menu {
+  display: none;
 }
 
 .list {
@@ -194,6 +213,44 @@
   text-decoration: none;
 }
 
+@media only screen and (max-width: 1024px) {
+  .icons {
+    display: none !important;
+  }
+  .mst__header {
+    position: fixed;
+  }
+  .ham__menu {
+    display: block !important;
+    cursor: pointer;
+  }
+  nav {
+    position: fixed !important;
+    top: 76px;
+    left: 0;
+    right: 0;
+    height: 0;
+    color: #333652;
+    background-color: #7b8288;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s all;
+  }
+  nav a {
+    padding: 32px 0px !important;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .active {
+    height: auto;
+    opacity: 0.8;
+  }
+}
 .card {
   font-family: Poppins;
   margin-top: 20px;
@@ -254,6 +311,18 @@
   transition: background-position-x 1000ms;
 }
 
+@media only screen and (max-width: 764px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+  }
+  .card .card__text {
+    width: 100%;
+    padding: 0;
+  }
+}
 .blog_list {
   height: 358px;
   overflow: auto;
@@ -288,6 +357,7 @@
 }
 
 .footer {
+  width: 100%;
   height: 200px;
   background: #767676;
   color: #ebe9eb;
@@ -403,4 +473,16 @@
 .follow__card .follow_icon {
   cursor: pointer;
   font-size: 28px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home__section {
+    padding: 180px 0px 0px 0px;
+  }
+  .card__container {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }

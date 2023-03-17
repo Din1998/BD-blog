@@ -25,6 +25,7 @@ export default function Card ({blog}) {
         }}
     
     >
+      
     <div className="card">
 
       <div className="card__img">
@@ -39,14 +40,9 @@ export default function Card ({blog}) {
         </Link>
           <p className="desc">{blog.discription}</p>
           <p className="pub__date">{new Date(blog.date).toDateString()}</p>
-
-
-            <Link className="link" to={`/post/${blog._id}`}>
-            <button className="card__btn">Read More...</button>
-            </Link>
-
-        
-        
+          <Link className="link" to={`/post/${blog._id}`}>
+          <button className="card__btn">Read More...</button>
+          </Link>
       </div>
      
     </div>
