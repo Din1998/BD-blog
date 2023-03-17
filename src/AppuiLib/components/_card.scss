@@ -47,4 +47,34 @@
   border: none;
   border-radius: $--base-radius-md;
   background-color: $--btn-color;
+  background-image: linear-gradient(
+   -60deg,
+   transparent,transparent 40%,
+   #fff 40%,#ffffff44 60%,
+    transparent 60%, transparent 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position-x: 150%;
 }
+
+.card__btn:hover{
+  background-position-x: -150%;
+  transition: background-position-x 1000ms;
+}
+
+@media only screen and (max-width: 764px){
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+
+    .card__text{
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  }

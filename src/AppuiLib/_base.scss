@@ -11,14 +11,19 @@
 //home
 
 .home__section{
-  padding: 52px 52px;
+
+  padding: 0px 52px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
   .card__container{
+    display: flex;
+    flex-direction: column-reverse;
     width: 800px;
   }
   .feature__content{
+    padding: 120px 0px;
     width: 300px;
   }
 }

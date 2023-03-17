@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook,faTwitter,faYoutube,faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faClose,faBarsStaggered} from '@fortawesome/free-solid-svg-icons'
 import '../css/index.css';
 import { motion } from "framer-motion";
+import { useRef } from 'react'
 
 export default function Navbar ({user}) {
   const logout = () => {
     window.open("https://server2023.vercel.app/auth/logout", "_self");
   };
+
+  const navRef = useRef();
+  const showNavBar = () => {
+    navRef.current.classList.toggle("active")
+  }
 
   return(
    
@@ -34,17 +41,24 @@ export default function Navbar ({user}) {
             }
           </div>
         </div>
+       {/* Navbar */}
         <motion.div
           initial={{y: -250}}
           animate={{y: -10}}
         >
         <div className="nav_items">
-            <nav>
+            <nav ref={navRef}>
               <a href="#">Home</a>
               <a href="#">Life Style</a>
               <a href="#">About</a>
               <a href="#">Contact</a>
             </nav>
+            <button 
+              className="ham__menu"
+              onClick={showNavBar}
+            >
+              <FontAwesomeIcon icon={faBarsStaggered} />
+            </button>
         </div>
         </motion.div>
     </header>

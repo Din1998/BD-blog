@@ -12,8 +12,8 @@ export default function FeaturePost() {
 
       <div className="info">
         <div className="feature__text">
-          <h3>hellow</h3>
-          <p>Im Din</p>
+          <h3>This Feature</h3>
+          <p>Comming Soon</p>
         </div>
         
       </div>
