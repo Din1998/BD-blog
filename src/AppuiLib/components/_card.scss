@@ -63,10 +63,13 @@
   transition: background-position-x 1000ms;
 }
 
+
+
 @media only screen and (max-width: 764px){
 
   .card {
     flex-direction: column;
+
     width: 100%;
     height: 500px;
     padding: 0;
@@ -77,4 +80,19 @@
     }
   }
   
+  }
+
+  @media only screen and (max-width: 320px){
+
+    .card {
+      
+      width: 274px;
+      
+      .card__text{
+        width: 100%;
+      
+      }
+    
+    }
+
   }

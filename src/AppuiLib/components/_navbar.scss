@@ -64,6 +64,9 @@
     }
     .ham__menu{
       display: none;
+      border: none;
+
+
 
     }
 
@@ -111,6 +114,7 @@
   .ham__menu{
     display: block !important;
     cursor: pointer;
+    margin-right: 70%;
   }
   nav{
     position: fixed !important;
