@@ -187,6 +187,7 @@
 }
 .mst__header .nav_items .ham__menu {
   display: none;
+  border: none;
 }
 
 .list {
@@ -223,6 +224,7 @@
   .ham__menu {
     display: block !important;
     cursor: pointer;
+    margin-right: 70%;
   }
   nav {
     position: fixed !important;
@@ -321,6 +323,14 @@
   .card .card__text {
     width: 100%;
     padding: 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .card {
+    width: 274px;
+  }
+  .card .card__text {
+    width: 100%;
   }
 }
 .blog_list {
@@ -483,6 +493,14 @@
     width: 100% !important;
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .card {
+    padding: 20px 0px 20px 20px;
+  }
+  .right__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

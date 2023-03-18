@@ -10,8 +10,18 @@ padding: 180px 0px 0px 0px;
   width: 100% !important;
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
+  align-items: flex-start;
 }
+
+.card {
+
+  padding: 20px 0px 20px 20px;
 
 }
 
+.right__content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+}
