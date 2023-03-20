@@ -524,6 +524,36 @@
   padding: 8px 16px;
 }
 
+.lifeStyle__page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lifeStyle__page h1 {
+  text-align: center;
+}
+
+.lifeStyle__page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lifeStyle__page h1 {
+  text-align: center;
+}
+
+.lifeStyle__page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lifeStyle__page h1 {
+  text-align: center;
+}
+
 @media only screen and (max-width: 1024px) {
   .home__section {
     padding: 180px 0px 0px 0px;

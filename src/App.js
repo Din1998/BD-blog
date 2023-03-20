@@ -10,6 +10,9 @@ import AddBlog from './page/AddPost';
 import Update from './page/Update';
 import './css/index.css'
 import Footer from './component/Footer';
+import LifeStyle from './page/LifeStyle';
+import About from './page/About';
+import Contact from './page/Contact';
 
 function App() {
 
@@ -67,6 +70,9 @@ function App() {
         <Routes>
           <Route path='/' element={< Home blog={blogs}/>}/>
           <Route path='/dashboard' element={<AddBlog blogs={blogs} />}/>
+          <Route path='/Lifestyle' element={ <LifeStyle />}/>
+          <Route path='/About' element={ <About />}/>
+          <Route path='/Contact' element={ <Contact />}/>
           
           <Route 
             path='/post/:id'
