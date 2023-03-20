@@ -1,0 +1,16 @@
+.search__list--wraper{
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 4px 0px #ddd;
+  margin-top: 1rem;
+  max-height: 100px;
+  overflow-y: scroll;
+  z-index: 2;
+  border-radius: 4px;
+  
+  .serch--each__list{
+    padding: 8px 16px;
+  }
+}
