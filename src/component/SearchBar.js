@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch} from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useRef,useState } from "react"
 
 
 export default function SearchBar({setResults}) {
@@ -30,24 +30,31 @@ export default function SearchBar({setResults}) {
   }
 
 
-
-
-
   const handleSubmit = (value) => {
     setInput(value)
     getData(value)
   }
 
+
+  const serchBarRef = useRef();
+  const showSearchBar = () => {
+    serchBarRef.current.classList.toggle("active__serchBar")
+  }
+
   return(
-    <div className="search__bar">
+    <>
+      <div className="search__bar" >
+        
+        <input ref={serchBarRef} 
+          type="text"
+          placeholder="Search Here"     
+          value={input}
+          onChange = {(e) => handleSubmit(e.target.value)}
+        />
+           <FontAwesomeIcon className="search_icon" onClick={showSearchBar} icon={faSearch} />
+      </div>
      
-      <input 
-        type="text"
-        placeholder="Search Here"     
-        value={input}
-        onChange = {(e) => handleSubmit(e.target.value)}
-      />
-       <FontAwesomeIcon className="header_icon" icon={faSearch} />
-    </div>
+    </>
   )
+    
 }

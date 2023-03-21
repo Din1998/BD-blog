@@ -500,14 +500,33 @@
   padding: 0px 4px;
   background-color: white;
   border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+  overflow: hidden;
 }
 .search__bar input {
   padding: 8px 8px;
   border: none;
+  width: 100%;
   border-right: 2px solid black;
   outline: none;
+  overflow: hidden;
+}
+.search__bar .search_icon {
+  padding: 0px 4px;
 }
 
+@media only screen and (max-width: 425px) {
+  .search__bar {
+    width: 200px;
+  }
+  .search__bar input {
+    width: 140px;
+  }
+}
 .search__list--wraper {
   width: 100%;
   background-color: white;
@@ -522,6 +541,36 @@
 }
 .search__list--wraper .serch--each__list {
   padding: 8px 16px;
+}
+
+.lifeStyle__page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lifeStyle__page h1 {
+  text-align: center;
+}
+
+.lifeStyle__page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lifeStyle__page h1 {
+  text-align: center;
+}
+
+.lifeStyle__page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lifeStyle__page h1 {
+  text-align: center;
 }
 
 @media only screen and (max-width: 1024px) {

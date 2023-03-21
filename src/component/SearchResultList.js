@@ -1,6 +1,9 @@
 
 
+
 export default function SearchResultList({results}) {
+
+  
 
   return(
     <div className="search__list--wraper">
