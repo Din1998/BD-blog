@@ -1,12 +1,48 @@
-.search__bar{
-  padding: 0px 4px;
-  background-color: white;
-  border-radius: 40px;
-  input{
-    padding: 8px 8px;
-    border:none ;
 
-    border-right: 2px solid black;
-    outline: none;
+
+  .search__bar{
+    padding: 0px 4px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    overflow: hidden;
+    input{
+      padding: 8px 8px;
+      border:none ;
+      width: 100%;
+      border-right: 2px solid black;
+      outline: none;
+      overflow: hidden;
+    }
+    .search_icon{
+      padding: 0px 4px;
+    }
   }
+
+  
+
+
+
+
+
+// responsive
+
+
+
+
+@media only screen and (max-width: 425px) {
+  
+  .search__bar{
+    width: 200px;
+
+    input{
+      width: 140px;
+    }
+  }
+
+  
 }
