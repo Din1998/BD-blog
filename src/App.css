@@ -34,4 +34,14 @@
   height: 40px;
 }
 
+.edit__icon{
+  font-size: 24px;
+ 
+}
+.date__{
+  display: flex;
+  align-items: center;
+}
+
+
 
